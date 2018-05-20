@@ -1,0 +1,1 @@
+{"javascript":"/**\n * @param {string[]} strs\n * @return {string}\n */\nvar longestCommonPrefix = function(strs) {\n    if (strs === undefined || strs.length === 0) { return ''; }\n\n    return strs.reduce((prev, next) => {\n        let i = 0;\n        while (prev[i] && next[i] && prev[i] === next[i]) i++;\n        return prev.slice(0, i);\n    });\n};"}
